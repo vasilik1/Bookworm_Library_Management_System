@@ -140,4 +140,29 @@ while True:
     else:
         print(" Invalid choice.Please enter a number between 1 and 7.")
         
+#Alternative way of operating the program without a welocme message.
+'''library.add_book("The Great Gatsby", "F.Scott. Fitzgerald", 5)
+library.add_book("Animal Farm", "George Orwell", 3)
 
+library.add_customer(101, "Susie", "Brown", 2)
+library.add_customer(102, "Nicolas", "Jones", 3)
+
+library.display_books()
+library.display_customers()
+
+current_date = datetime.now().replace(second=0, microsecond=0)  # Current date without seconds and microseconds
+
+library.borrow_book(101, "The Great Gatsby", current_date)
+library.borrow_book(102, "Animal Farm", current_date)
+
+library.display_books()
+library.display_customers()
+
+return_date_1 = current_date + timedelta(days=15)
+return_date_2 = current_date + timedelta(days=12)
+
+library.return_book(101, "The Great Gatsby", return_date_1)
+library.return_book(102, "Animal Farm", return_date_2)
+
+library.display_books()
+library.display_customers()'''
