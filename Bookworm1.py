@@ -61,8 +61,7 @@ class LibrarySystem:
                 days_late = max(0, (return_date - due_date).days)
                 if days_late > 0:
                     penalty = self.calculate_penalty(due_date, return_date)
-                    print(f"Book '{book_title}' returned by {self.customers[customer_id]['name']} {days_late} days late. 
-                          Late return penalty applied: {penalty} points.")
+                    print(f"Book '{book_title}' returned by {self.customers[customer_id]['name']} {days_late} days late.Late return penalty applied: {penalty} points.")
                     # Log book late return.
                     print(f"Late return log: Customer {self.customers[customer_id]['name']} 
                           (ID: {customer_id}) returned '{book_title}' {days_late} days late.")
