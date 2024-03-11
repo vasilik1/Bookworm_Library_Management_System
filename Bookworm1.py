@@ -82,32 +82,58 @@ class LibrarySystem:
             borrowed_books = ', '.join([book['title'] for book in info['borrowed_books']])
             print(f"ID: {customer_id}, Name: {info['name']}, Borrowed Books: {borrowed_books}, Reward Points: {self.reward_points[customer_id]}")
 
+# Welcome Message and program operations menu.
+print("Welcome to Bookworm our library Management System!")
+print("Here are the available operations of our program: ")
+print("1. Add a book")
+print("2. Add a customer")
+print("3.Borrow a book")
+print("4. Return a book")
+print("5.Display all books")
+print("6. Dispaly all customers")
+print("Exit")
+
 
 # Example Usage
 library = LibrarySystem()
 
-library.add_book("The Great Gatsby", "F.Scott. Fitzgerald", 5)
-library.add_book("Animal Farm", "George Orwell", 3)
+while True:
+    choice = input("Enter your choice: ")
 
-library.add_customer(101, "Susie", "Brown", 2)
-library.add_customer(102, "Nicolas", "Jones", 3)
+    if choice == "1":
+        title = input("Enter the title of the book: ")
+        author = input("Enter the author of the book; ")
+        copies = input("Enter the number of copies available: ")
+        library.add_book(title, author, copies)
+    
+    elif choice == "2":
+        customer_id = input("Enter the customer ID: ")
+        name = input("Enter the customer's first name: ")
+        surname = input("Enter the customer's last name: ")
+        max_books = input("Enter the maximum number of books allowed to borrow: ")
+        library.add_customer(customer_id, name, surname, max_books)
 
-library.display_books()
-library.display_customers()
+    elif choice == "3":
+        customer_id = input("Enter the customer ID:  ")
+        book_title = input ("Enter the title of the book to borrow: ")
+        current_date = datetime.now().replace(seconds =0, microsecond =0)
+        library.borrow_book(customer_id,book_title, current_date)
 
-current_date = datetime.now().replace(second=0, microsecond=0)  # Current date without seconds and microseconds
+    elif choice == "4":
+        customer_id = input("Enter the customer ID: ")
+        book_title = input ("Enter the title of the book to return: ")
+        return_date = datetime.now().replace(second =0, microsecond =0)
+        library.return_book(customer_id, book_title, return_date)
 
-library.borrow_book(101, "The Great Gatsby", current_date)
-library.borrow_book(102, "Animal Farm", current_date)
+    elif choice == "5":
+        library.display_books()
+    elif choice == "6":
+        library.display_customers()
+    elif choice == "7":
+        print( "Exiting the program. Thank you!")
+        break
+    else:
+        print(" Invalid choice.Please enter a number between 1 and 7.")
 
-library.display_books()
-library.display_customers()
 
-return_date_1 = current_date + timedelta(days=15)
-return_date_2 = current_date + timedelta(days=12)
 
-library.return_book(101, "The Great Gatsby", return_date_1)
-library.return_book(102, "Animal Farm", return_date_2)
-
-library.display_books()
-library.display_customers()
