@@ -139,7 +139,7 @@ while True:
         print(" Invalid choice.Please enter a number between 1 and 7.")
 
 
-#Alternative way of operating the program without a welocme message.
+#Alternative way of operating the program without a welcome message/user interaction.
 '''library.add_book("The Great Gatsby", "F.Scott. Fitzgerald", 5)
 library.add_book("Animal Farm", "George Orwell", 3)
 
