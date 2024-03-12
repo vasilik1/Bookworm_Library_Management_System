@@ -139,6 +139,7 @@ while True:
         break
     else:
         print(" Invalid choice.Please enter a number between 1 and 7.")
+improve-error-handling
         
 #Alternative way of operating the program without a welocme message.
 '''library.add_book("The Great Gatsby", "F.Scott. Fitzgerald", 5)
@@ -157,12 +158,12 @@ library.borrow_book(102, "Animal Farm", current_date)
 
 library.display_books()
 library.display_customers()
+main
 
-return_date_1 = current_date + timedelta(days=15)
-return_date_2 = current_date + timedelta(days=12)
 
-library.return_book(101, "The Great Gatsby", return_date_1)
-library.return_book(102, "Animal Farm", return_date_2)
 
+improve-error-handling
 library.display_books()
 library.display_customers()'''
+
+main
