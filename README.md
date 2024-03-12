@@ -34,3 +34,24 @@ Shows customer IDs, names, borrowed books, and reward points earned.
 
 Exit:
 Terminates the program and exits the Library Management System.
+
+Alternative way of operating the Bookworm Program:
+This part demonstrates an alternative way of using the library management system.
+Books and customers are added directly without user input.
+Borrowing operations are performed programmatically without user interaction.
+Useful for testing purposes or pre-configuring the library system with initial data.
+
+Suggestions for using the alternative way for operating the program that does not require user interaction:
+Testing and Pre-Configuration:
+This is useful when you want to pre-configure the library system with initial books and customers.
+It can also serve as a quick way to test the functionality of the library system without going through manual input.
+
+Automated Operations:
+You can use the alternative way to perform automated operations or simulations within the library system.
+For example, you can simulate borrowing and returning books over specific periods to analyze the system's behavior.
+
+Data Initialization:
+This alternative approach can be used to initialize the library system with sample data for demonstration or training purposes.
+It helps showcase the capabilities of the system without requiring manual input from users.
+
+In summary, while the first part of the program provides an interactive interface for users to interact with the library system, the second part offers flexibility for testing, automation, and data initialization. 
