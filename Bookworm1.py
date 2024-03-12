@@ -98,8 +98,6 @@ print("5.Display all books")
 print("6. Dispaly all customers")
 print("Exit")
 
-
-# Example Usage
 library = LibrarySystem()
 
 while True:
@@ -139,8 +137,8 @@ while True:
         break
     else:
         print(" Invalid choice.Please enter a number between 1 and 7.")
-improve-error-handling
-        
+
+
 #Alternative way of operating the program without a welocme message.
 '''library.add_book("The Great Gatsby", "F.Scott. Fitzgerald", 5)
 library.add_book("Animal Farm", "George Orwell", 3)
@@ -158,12 +156,6 @@ library.borrow_book(102, "Animal Farm", current_date)
 
 library.display_books()
 library.display_customers()
-main
 
 
 
-improve-error-handling
-library.display_books()
-library.display_customers()'''
-
-main
